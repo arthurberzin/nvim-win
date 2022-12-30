@@ -44,7 +44,7 @@ yarn build
 
 ###### Open Nvim and install needed languages
 ```
-:CocInstall coc-omnisharp coc-html-css-support coc-docker coc-yaml coc-json coc-eslint coc-css coc-jedi coc-prettier coc-git coc-angular coc-angular
+:CocInstall coc-omnisharp coc-html-css-support coc-docker coc-yaml coc-json coc-eslint coc-css coc-jedi coc-prettier coc-git coc-angular coc-angular coc-csharp-ls
 ```
 
 
