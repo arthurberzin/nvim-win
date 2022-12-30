@@ -38,5 +38,13 @@ Plug 'https://github.com/benatespina/development.svg.icons'
 
 Plug 'neoclide/coc.nvim'
 
-
+Plug 'neoclide/coc-yaml'
+Plug 'neoclide/coc-json'
+Plug 'neoclide/coc-eslint'
+Plug 'neoclide/coc-css'
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+Plug 'neoclide/coc-prettier'
+Plug 'neoclide/coc-git'
+Plug 'iamcco/coc-angular'
+ 
 call plug#end()
