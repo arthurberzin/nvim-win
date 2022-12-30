@@ -51,4 +51,5 @@ yarn build
 # Useful Links
 
 [vim awesome](https://vimawesome.com/) - many plugins for vim
+
 [astro vim](https://astronvim.github.io/) - cool build
