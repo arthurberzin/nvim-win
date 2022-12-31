@@ -2,7 +2,7 @@
 
 ### Install NVim
 ###### Open Powershell as admin and run command
-```
+```powershell
 choco install neovim -fy;
 choco install nodejs -fy;
 choco install python2 -fy;
@@ -15,38 +15,37 @@ echo "done..."
      
 ### Install [vim-plug](https://github.com/junegunn/vim-plug)
 
-```
+```powershell
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 ```
 
 ### Get config
 
-```
+```powershell
 git clone https://github.com/arthurberzin/vim $env:LOCALAPPDATA\nvim
 ```
 
 ### Build Coc
+```powershell
+cd $env:LOCALAPPDATA\nvim-data\plugged\coc.nvim;
+yarn install;
+yarn build;
+echo "done..."
 ```
-cd $env:LOCALAPPDATA\nvim-data\plugged\coc.nvim
+### Install plugins
+```powershell
+nvim -c :PlugInstall -es
 ```
-```
-yarn install
-```
-```
-yarn build
-```
-#### Go to Nvim and install plugins
-```
+###### or go to Nvim and install plugins manualy
+```vim
 :PlugInstall
 ```
-#### Complete instaling Coc
 
-###### Open Nvim and install needed languages
+#### Complete instaling Coc by installing needed languages
+```powershell
+nvim -c ':CocInstall coc-omnisharp coc-html-css-support coc-docker coc-yaml coc-json coc-eslint coc-css coc-jedi coc-prettier coc-git coc-angular coc-angular coc-csharp-ls' -es
 ```
-:CocInstall coc-omnisharp coc-html-css-support coc-docker coc-yaml coc-json coc-eslint coc-css coc-jedi coc-prettier coc-git coc-angular coc-angular coc-csharp-ls
-```
-
 
 # Useful Links
 
