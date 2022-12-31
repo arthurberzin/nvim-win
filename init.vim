@@ -11,6 +11,10 @@
 
 :set completeopt-=preview
 
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+
 nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
 
