@@ -43,6 +43,73 @@ echo "done..."
 ```powershell
 nvim -c ':CocInstall coc-omnisharp coc-html-css-support coc-docker coc-yaml coc-json coc-eslint coc-css coc-jedi coc-prettier coc-git coc-angular coc-angular coc-csharp-ls'
 ```
+# Install on Linux
+
+### Install NVim
+###### Open Bash run commands
+```bash
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+```
+If the `./nvim.appimage` command fails, try:
+
+```bash
+./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
+
+# Optional: exposing nvim globally.
+sudo mv squashfs-root /
+sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+nvim
+```
+### Install dependencies 
+#### - install packages
+```bash
+sudo apt-get install python2 && sudo apt-get install python3 python3.10-venv python-pip python3-pip python-jedi
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
+sudo update-alternatives --config python
+# select 2.7
+
+pip3 install jedi
+npm install --global yarn
+```
+####  - del-vim-tagbar Plugin depend on [Exuberant Ctags](https://ctags.sourceforge.net/)
+```bash
+sudo apt-get install -y exuberant-ctags
+```
+#### - install [vim-plug](https://github.com/junegunn/vim-plug)
+
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+### Get config
+
+```bash
+cd ~ && mkdir .config && cd .config && mkdir nvim && cd ~
+git clone https://github.com/arthurberzin/vim ~/.config/nvim
+```
+
+### Install plugins
+```bash
+nvim -c ':PlugInstall'
+```
+
+### Build Coc
+```bash
+cd ~/.local/share/nvim/plugged/coc.nvim && yarn install && yarn build && nvim -c ':PlugInstall'
+```
+
+#### Complete instaling Coc by installing needed languages
+```bash
+nvim -c ':CocInstall coc-omnisharp coc-html-css-support coc-docker coc-yaml coc-json coc-eslint coc-css coc-jedi coc-prettier coc-git coc-angular coc-csharp-ls'
+```
+
+
 
 # Useful Links
 
