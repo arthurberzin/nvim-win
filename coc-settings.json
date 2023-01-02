@@ -7,4 +7,17 @@
   "coc.preferences.enableLinkedEditing": true,
   "coc.preferences.formatOnSave": true,
   "coc.source.file.ignoreHidden": false,
+
+  // python config
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": ["cs"],
+      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+    }
+  }
 }
+
