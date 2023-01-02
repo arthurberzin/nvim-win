@@ -14,9 +14,10 @@
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
-nnoremap <F1> :NERDTreeToggle<CR>
-nnoremap <F8> :TagbarToggle<CR>
+vmap <C-f>  <Plug>(coc-format-selected)
+nmap <C-f>  <Plug>(coc-format-selected)
 
 "Use to import awesome-vim-colorschemes themes
 "source $LOCALAPPDATA\nvim-data\plugged\awesome-vim-colorschemes\colors\dogrun.vim
@@ -31,7 +32,6 @@ Plug 'preservim/nerdtree' |
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
-"Plug 'rafi/awesome-vim-colorschemes'
 Plug 'cj/vim-webdevicons'
 Plug 'tc50cal/vim-terminal'
 Plug 'terryma/vim-multiple-cursors'
@@ -39,7 +39,7 @@ Plug 'valsorym/.del.vim-tagbar'
 Plug 'tribela/vim-transparent'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'https://github.com/benatespina/development.svg.icons'
-
+Plug 'voldikss/vim-floaterm'
 Plug 'neoclide/coc.nvim'
 
 Plug 'neoclide/coc-yaml'
@@ -52,3 +52,18 @@ Plug 'neoclide/coc-git'
 Plug 'iamcco/coc-angular'
  
 call plug#end()
+
+let g:floaterm_width=0.9
+let g:floaterm_height=0.9
+
+let g:floaterm_keymap_new    = '<C-F4>'
+"let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<C-F3>'
+let g:floaterm_keymap_toggle = '<C-F2>'
+
+nnoremap <F1> :NERDTreeToggle<CR>
+nnoremap <C-F8> :TagbarToggle<CR>
+
+
+hi Floaterm guibg=black blend=30
+hi FloatermBorder guibg=black guifg=black blend=30'
