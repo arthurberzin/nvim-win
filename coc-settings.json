@@ -8,7 +8,6 @@
   "coc.preferences.formatOnSave": true,
   "coc.source.file.ignoreHidden": false,
 
-  // python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
 
