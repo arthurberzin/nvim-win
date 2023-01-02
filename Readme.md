@@ -8,6 +8,9 @@ choco install nodejs -fy;
 choco install python2 -fy;
 choco install pip -fy;
 pip3 install jedi;
+choco install lazygit -fy;
+choco install lazydocker -fy;
+dotnet tool install --global csharp-ls;
 echo "done..."
 ```
 ### del-vim-tagbar Plugin depend on [Exuberant Ctags](https://ctags.sourceforge.net/)
@@ -67,15 +70,36 @@ nvim
 #### - install packages
 ```bash
 sudo apt-get install python2 && sudo apt-get install python3 python3.10-venv python-pip python3-pip python-jedi
-
+```
+```bash
+ brew install lazygit ;
+    brew install lazydocker;
+    brew install bpytop;
+    brew install ncdu
+```
+```bash
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+```
+```bash
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
+```
+```bash
 sudo update-alternatives --config python
-# select 2.7
+```
 
+###### select 2.7
+
+```bash
 pip3 install jedi
+```
+```bash
 npm install --global yarn
 ```
+#### - In order to use Coc with Dotnet install csharp-ls
+```bash
+dotnet tool install --global csharp-ls
+```
+
 ####  - del-vim-tagbar Plugin depend on [Exuberant Ctags](https://ctags.sourceforge.net/)
 ```bash
 sudo apt-get install -y exuberant-ctags
