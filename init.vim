@@ -1,3 +1,5 @@
+let mapleader=" "
+
 :set number
 :set relativenumber
 :set autoindent
@@ -6,26 +8,18 @@
 :set smarttab
 :set softtabstop=4
 :set mouse=a
-
 :set encoding=UTF-8
-
 :set completeopt-=preview
 
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+"Set Popup menu colors
+hi Pmenu ctermfg=white ctermbg=8
 
-vmap <C-f>  <Plug>(coc-format-selected)
-nmap <C-f>  <Plug>(coc-format-selected)
-
-"Use to import awesome-vim-colorschemes themes
-"source $LOCALAPPDATA\nvim-data\plugged\awesome-vim-colorschemes\colors\dogrun.vim
 
 call plug#begin()
-
 Plug 'https://github.com/vim-airline/vim-airline'
-
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons'
@@ -39,9 +33,7 @@ Plug 'valsorym/.del.vim-tagbar'
 Plug 'tribela/vim-transparent'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'https://github.com/benatespina/development.svg.icons'
-Plug 'voldikss/vim-floaterm'
 Plug 'neoclide/coc.nvim'
-
 Plug 'neoclide/coc-yaml'
 Plug 'neoclide/coc-json'
 Plug 'neoclide/coc-eslint'
@@ -50,20 +42,55 @@ Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build'
 Plug 'neoclide/coc-prettier'
 Plug 'neoclide/coc-git'
 Plug 'iamcco/coc-angular'
+Plug 'folke/which-key.nvim' 
+Plug 'voldikss/vim-floaterm'
  
 call plug#end()
 
-let g:floaterm_width=0.9
-let g:floaterm_height=0.9
 
-let g:floaterm_keymap_new    = '<C-F4>'
-"let g:floaterm_keymap_prev   = '<F8>'
-let g:floaterm_keymap_next   = '<C-F3>'
-let g:floaterm_keymap_toggle = '<C-F2>'
+" Configure Hot Keys
+let g:floaterm_keymap_new    = '<space>4'
+let g:floaterm_keymap_prev   = '<space>2'
+let g:floaterm_keymap_next   = '<space>3'
+let g:floaterm_keymap_toggle = '<space>1'
 
-nnoremap <F1> :NERDTreeToggle<CR>
-nnoremap <C-F8> :TagbarToggle<CR>
+nnoremap <space><tab> :NERDTreeToggle<CR>
+nnoremap <space>8 :TagbarToggle<CR>
+nnoremap <Space><Space> :WhichKey<CR>
+
+nnoremap <space>g :FloatermNew lazygit<CR>
+nnoremap <space>d :FloatermNew lazydocker<CR>
+nnoremap <space>r :FloatermNew ranger<CR>
+nnoremap <space>y :FloatermNew bpytop<CR>
+nnoremap <space>n :FloatermNew ncdu<CR>
 
 
+" Settign up Plugins
+
+let NERDTreeShowHidden=1
+
+" Configure Floaterm
+let g:floaterm_width=0.95
+let g:floaterm_height=0.95
+
+let g:floaterm_gitcommit='floaterm'
+let g:floaterm_autoinsert=1
+let g:floaterm_wintitle=0
+let g:floaterm_autoclose=1
+
+
+
+
+
+"Set Floaterm colors
 hi Floaterm guibg=black blend=30
 hi FloatermBorder guibg=black guifg=black blend=30'
+
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
+
