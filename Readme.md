@@ -34,7 +34,7 @@ git clone https://github.com/arthurberzin/vim $env:LOCALAPPDATA\nvim
 nvim -c ':PlugInstall'
 ```
 
-### Build Coc
+### Build Neovim Intellisense with Coc
 ```powershell
 cd $env:LOCALAPPDATA\nvim-data\plugged\coc.nvim;
 yarn install;
@@ -95,7 +95,7 @@ pip3 install jedi
 ```bash
 npm install --global yarn
 ```
-#### - In order to use Coc with Dotnet install csharp-ls
+#### - In order to use intellisense with Dotnet install csharp-ls
 ```bash
 dotnet tool install --global csharp-ls
 ```
@@ -123,7 +123,7 @@ git clone https://github.com/arthurberzin/vim ~/.config/nvim
 nvim -c ':PlugInstall'
 ```
 
-### Build Coc
+### Build Neovim Intellisense with Coc
 ```bash
 cd ~/.local/share/nvim/plugged/coc.nvim && yarn install && yarn build && nvim -c ':PlugInstall'
 ```
