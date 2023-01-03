@@ -46,9 +46,12 @@ Plug 'coc-extensions/coc-omnisharp'
 Plug 'yaegassy/coc-html-css-support'
 Plug 'josa42/coc-docker'
 Plug 'iamcco/coc-angular'
+Plug 'neoclide/coc-python'
+Plug 'neoclide/coc-pairs'
+ 
 Plug 'folke/which-key.nvim' 
 Plug 'voldikss/vim-floaterm'
- 
+
 call plug#end()
 
 
