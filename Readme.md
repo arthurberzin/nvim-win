@@ -1,9 +1,11 @@
-
 # Install on Windows
-#####  ` NOT INSTALL Python2`
+
+##### `NOT INSTALL Python2`
 
 ### Install NVim
+
 ###### Open Powershell as admin and run command
+
 ```powershell
 choco install neovim -fy;
 choco install nodejs -fy;
@@ -56,11 +58,11 @@ echo "done ..."
 ```
 
 ### Get config
+
 ```powershell
 git clone https://github.com/arthurberzin/nvim-win $env:LOCALAPPDATA\nvim
 ```
 
-     
 ## Install [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```powershell
@@ -68,26 +70,33 @@ git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data
 ```
 
 ### Install plugins
+
 ```powershell
 nvim +":PackerSync"
 ```
+
 ### Login to GitHub
+
 ```powershell
 gh auth login
 ```
+
 ### Set `tree-sitter-cli` to Path
+
 ```powershell
 Set-ItemProperty -path HKCU:\Environment\ -Name Path -Value "$((Get-ItemProperty -path HKCU:\Environment\ -Name Path).Path);$env:APPDATA\npm\node_modules\tree-sitter-cli";
 ```
 
-
 ### If will be needed
-#### del-vim-tagbar Plugin depend on [Exuberant Ctags](https://ctags.sourceforge.net/)
+
+### del-vim-tagbar Plugin depend on [Exuberant Ctags](https://ctags.sourceforge.net/)
+
 ###### To install it just copy `ctag.exe` to folder in path list
 
-
 ### Windows HotKey
+
 ###### vim code
+
 ```vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
