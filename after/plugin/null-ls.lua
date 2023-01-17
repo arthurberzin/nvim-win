@@ -1,5 +1,6 @@
 
 --https://github.com/jay-babu/mason-null-ls.nvim 
+-- https://github.com/jay-babu/mason-null-ls.nvim#setup
 require("mason-null-ls").setup({
     -- A list of sources to install if they're not already installed.
     -- This setting has no relation with the `automatic_installation` setting.
@@ -60,3 +61,6 @@ require("mason-null-ls").setup({
 	-- 	Ex: { types = { eslint_d = {'formatting'} } }
 	automatic_setup = true,
 })
+
+-- Required when `automatic_setup` is true
+require('mason-null-ls').setup_handlers()

@@ -102,6 +102,8 @@ wk.register({
           s = { "<cmd>help mason-lspconfig-requirements<cr>", "Mason LSP Setup"},
           t = { "<cmd>help vim-treesitter<cr>", "Treesitter"},
           a = { "<cmd>help<cr>", "Nvim Help"},
+          z = { "<cmd>help lsp-zero<cr>", "Help LSP-Zero"},
+          
         },
        },
       f = {
