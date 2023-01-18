@@ -103,7 +103,6 @@ wk.register({
           t = { "<cmd>help vim-treesitter<cr>", "Treesitter"},
           a = { "<cmd>help<cr>", "Nvim Help"},
           z = { "<cmd>help lsp-zero<cr>", "Help LSP-Zero"},
-          
         },
        },
       f = {
@@ -187,11 +186,16 @@ wk.register({
       l = {
         name = "LSP & TreeSitter",
         t = { "<cmd>TSUpdateSync<cr>", "TreeSitter Update All"},
-        f = { "<cmd>LspInfo<cr>", "LSP Info"},
+        n = { "<cmd>LspInfo<cr>", "LSP Info"},
         s = { "<cmd>LspStart<cr>", "LSP Start"},
         p = { "<cmd>LspStop<cr>", "LSP Stop"},
         r = { "<cmd>LspRestart<cr>", "LSP Restart"},
         i = { "<cmd>LspInstall<cr>", "LSP Install"},
+        --f = { vim.lsp.buf.formatting, "LSP Format"}, -- deprecated
+        --f = { function() vim.lsp.buf.format{async=true} end, "LSP Format"},
+        f = { "<cmd>Prettier<cr>", "LSP Format"},
+
+        
       },
     },
   })

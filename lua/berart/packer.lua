@@ -63,7 +63,12 @@ return packer.startup(function(use)
   use("folke/which-key.nvim")
   use("kyazdani42/nvim-web-devicons")
   use("goolord/alpha-nvim")
-  use ('tamton-aquib/staline.nvim')
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use 'nvim-lua/lsp-status.nvim'
+  use 'arkav/lualine-lsp-progress'
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use {
     "nvim-neo-tree/neo-tree.nvim",
@@ -75,6 +80,7 @@ return packer.startup(function(use)
       }
     }
   use 'famiu/bufdelete.nvim'
+  use('MunifTanjim/prettier.nvim')
 end)
 
 
@@ -86,3 +92,6 @@ end)
 --https://github.com/phaazon/hop.nvim.
 -- https://github.com/lewis6991/impatient.nvim
 -- https://github.com/Mofiqul/vscode.nvim/blob/main/README.md
+-- https://github.com/lewis6991/gitsigns.nvim
+ -- https://github.com/airblade/vim-gitgutter
+ -- https://github.com/lukas-reineke/indent-blankline.nvim
