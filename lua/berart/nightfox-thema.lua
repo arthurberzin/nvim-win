@@ -40,6 +40,11 @@ local palettes = {
       --
       -- Defining just a color defines it's base color
       red = "#ff0000",
+      --bg0 = "none",
+      --bg1 = "none",
+      --bg2 = "none",
+      --bg3 = "none",
+      --bg4 = "none",
     },
     nightfox = {
       -- A specific style's value will be used over the `all`'s value

@@ -1,6 +1,7 @@
 require("berart/remap")
 require("berart/packer")
 require("berart/treesitter")
+require("berart/remap")
 require("berart/nightfox-thema")
 
 
