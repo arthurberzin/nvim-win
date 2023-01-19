@@ -175,8 +175,9 @@ wk.register({
         o = { vim.diagnostic.open_float , "Open Float"}, -- ?????
         b = { vim.diagnostic.goto_next , "Move to Next LSP Issue"},
         c = { vim.diagnostic.goto_prev , "Move to Prev LSP Issue"},
-      },
-      ["<Tab>"] = { "<cmd>Neotree toggle<cr>" , "Neo Tree"},
+      },      
+      ["<Tab>"] = {"<cmd>BufferLineCycleNext<cr>" , "Next buffer"},
+      e = { "<cmd>Neotree toggle<cr>" , "Neo Tree"},
       m ={
         name = "Mason",
         m = { "<cmd>Mason<cr>", "Open Mason" },

@@ -83,6 +83,8 @@ return packer.startup(function(use)
   use('MunifTanjim/prettier.nvim')
 end)
 
+--https://www.youtube.com/watch?v=w7i4amO_zaE&t=1221s
+-- https://dev.to/craftzdog/my-neovim-setup-for-react-typescript-tailwind-css-etc-58fb
 
 --https://github.com/tpope/vim-surround
 -- https://github.com/windwp/nvim-autopairs
@@ -95,3 +97,8 @@ end)
 -- https://github.com/lewis6991/gitsigns.nvim
  -- https://github.com/airblade/vim-gitgutter
  -- https://github.com/lukas-reineke/indent-blankline.nvim
+
+--https://github.com/onsails/lspkind.nvim
+
+
+ --https://github.com/AstroNvim/AstroNvim/blob/main/lua/core/mappings.lua

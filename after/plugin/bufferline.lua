@@ -2,10 +2,12 @@
 vim.opt.termguicolors = true
 
 local function closeBuffArg(id) 
-    vim.api.nvim_command(string.format("bdelete! %d",id)) 
+    --vim.api.nvim_command(string.format("bdelete! %d",id)) 
+    require("bufdelete").bufdelete(0, true)
 end;
 local function closeBuff(id) 
-    vim.api.nvim_command(string.format("bdelete %d",id)) 
+    --vim.api.nvim_command(string.format("bdelete %d",id)) 
+    require("bufdelete").bufdelete(0, false)
 end;
 local function buffSelect(id) 
     vim.api.nvim_command(string.format("buffer %d",id)) 
